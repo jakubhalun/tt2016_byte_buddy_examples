@@ -7,8 +7,6 @@ import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.implementation.FieldAccessor;
 import net.bytebuddy.implementation.MethodCall;
 import net.bytebuddy.implementation.MethodDelegation;
-import net.bytebuddy.implementation.bind.annotation.RuntimeType;
-import net.bytebuddy.implementation.bind.annotation.This;
 
 public class ClassCreationExample {
 
@@ -50,4 +48,30 @@ public class ClassCreationExample {
 
 }
 
+/*
+ 
+// This is equivalent class for Byte Buddy definition above
+  
+package pl.halun.example;
+
+class BbGeneratedClass implements Runnable, Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	private final String name;
+	
+	public BbGeneratedClass(String name) {
+		this.name = name;
+	}
+	
+	public void run() {
+		System.out.println(Thread.currentThread().getId());
+		System.out.println(this);
+	}
+	
+	public String toString() {
+		return name;
+	}
+}
+*/
 
