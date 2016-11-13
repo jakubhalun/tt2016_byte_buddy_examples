@@ -1,7 +1,8 @@
-package pl.halun.demo.bytebuddy.agent.examples.agents;
+package pl.halun.demo.bytebuddy.agent.examples.agents.hello;
 
 import static net.bytebuddy.matcher.ElementMatchers.any;
 import static net.bytebuddy.matcher.ElementMatchers.named;
+import pl.halun.demo.bytebuddy.agent.examples.agents.AgentCreator;
 import net.bytebuddy.agent.builder.AgentBuilder;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.DynamicType;
